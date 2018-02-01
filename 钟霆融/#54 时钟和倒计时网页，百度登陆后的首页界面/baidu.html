@@ -59,19 +59,56 @@
 
         }
         .form-input{
-            width: 550px;
+            width: 535px;
             height: 30px;
+            outline-width: thin;
         }
         .form-button{
             width: 99px;
             background-color: #4791FF;
             font-size: 15px;
             color:white;
-            border: 1px;
+            border:none;
+            outline:none;
+        }
+        .form-button:hover{
+            background-color: #4680eb
         }
         .hre:visited{
             color: #aaaaaa;
         }
+        .dropbtn{
+            background-color: #4791FF;
+            color:white;
+            padding:4px;
+            font-size: 13px;
+            border:none;
+            cursor: pointer;
+            outline: none;
+
+        }
+        .dropdown{
+            position:relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            background: #f1f1f1;
+            min-width:160px;
+            /*box-shadow:0px 8px 13px 0px rgba(0,0,0,0.2)*/
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover{background-color: #afafaf}
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -94,12 +131,23 @@
                 <a>&nbsp;&nbsp;</a>
                 <a class="word" href="http://baidu.com/">设置</a>
                 <a>&nbsp;&nbsp;</a>
+                <div class="dropdown">
+                    <button class="dropbtn">更多产品</button>
+                    <div class="dropdown-content">
+                        <a href="http://www.baidu.com/">糯米</a>
+                        <a href="http://www.baidu.com/">音乐</a>
+                        <a href="http://www.baidu.com/">图片</a>
+
+                    </div>
+                </div>
             </span>
 
         </div>
         <div class="row">
             <span class="item">
-                <img src="bd_logo1.png" height="129" width="270"/>
+                <a href="http://baidu.com/">
+                    <img src="bd_logo1.png" height="129" width="270"/>
+                </a>
             </span>
         </div>
         <div class="row">
