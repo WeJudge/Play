@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .box{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+        .row{
+            display:flex;
+            flex-basis: 100px;
+            flex-direction: row-reverse;
+        }
+        .row:nth-child(2){
+            flex-basis: 150px;
+            justify-content: center;
+        }
+        .row:nth-child(3){
+            flex-basis: 36px;
+            justify-content: center;
+        }
+        .row:nth-child(4) {
+            flex-basis: 250px;
+            justify-content: center;
+        }
+        .row:nth-child(5){
+            flex-basis:65px;
+            justify-content: center;
+        }
+        .row:nth-child(6){
+            flex-basis:35px;
+            justify-content: center;
+        }
+        .row:nth-child(7){
+            flex-basis:25px;
+            justify-content: center;
+        }
+        .row:nth-child(8){
+            flex-basis:30px;
+            justify-content: center;
+        }
+
+        .word{
+            font-size:13px;
+            color: black;
+            font-weight: bold;
+        }
+        a:visited {
+            color: #000000;
+
+        }
+        a:hover {
+            color: blue;
+
+        }
+        .form-input{
+            width: 535px;
+            height: 30px;
+            outline-width: thin;
+        }
+        .form-button{
+            width: 99px;
+            background-color: #4791FF;
+            font-size: 15px;
+            color:white;
+            border:none;
+            outline:none;
+        }
+        .form-button:hover{
+            background-color: #4680eb
+        }
+        .hre:visited{
+            color: #aaaaaa;
+        }
+        .dropbtn{
+            background-color: #4791FF;
+            color:white;
+            padding:4px;
+            font-size: 13px;
+            border:none;
+            cursor: pointer;
+            outline: none;
+
+        }
+        .dropdown{
+            position:relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            background: #f1f1f1;
+            min-width:160px;
+            /*box-shadow:0px 8px 13px 0px rgba(0,0,0,0.2)*/
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover{background-color: #afafaf}
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row">
+            <span class="item">
+                <a class="word" href="http://www.baidu.com/">新闻</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">hao123</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">地图</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">视频</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">贴吧</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">学术</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">Rom</a>
+                <a>&nbsp;&nbsp;</a>
+                <a class="word" href="http://baidu.com/">设置</a>
+                <a>&nbsp;&nbsp;</a>
+                <div class="dropdown">
+                    <button class="dropbtn">更多产品</button>
+                    <div class="dropdown-content">
+                        <a href="http://www.baidu.com/">糯米</a>
+                        <a href="http://www.baidu.com/">音乐</a>
+                        <a href="http://www.baidu.com/">图片</a>
+
+                    </div>
+                </div>
+            </span>
+
+        </div>
+        <div class="row">
+            <span class="item">
+                <a href="http://baidu.com/">
+                    <img src="bd_logo1.png" height="129" width="270"/>
+                </a>
+            </span>
+        </div>
+        <div class="row">
+            <input class= "form-button" type="submit" value="百度一下">
+            <input class= "form-input" type="text">
+        </div>
+        <div class="row">
+            <span class="item"></span>
+        </div>
+        <div class="row">
+           <span class="item">
+               <img src="qcode.pic" height="64" width="65"/>
+           </span>
+        </div>
+        <div class="row">
+            <span class="item" style="font-size: 12px;color:#666666;">百度</span>
+        </div>
+        <div class="row">
+
+            <span class="item" style="font-size: 12px;color: #afafaf">
+                <a class="hre" href="http://baidu.com/">把百度设为主页</a>
+                 <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="hre" href="http://baidu.com/">关于百度</a>
+                 <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="hre" href="http://baidu.com/">About Baidu</a>
+                 <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a class="hre" href="http://baidu.com/">百度推广</a>
+                 <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </span>
+        </div>
+        <div class="row">
+            <span class="item" style="font-size: 12px;color: #afafaf">
+                <span>©2018 Baidu <a class="hre" href="http://baidu.com/">使用百度前必读</a> <a class="hre" href="http://baidu.com">意见反馈</a>&nbsp;&nbsp;京ICP证030173号</span>
+                 <a>&nbsp;&nbsp;</a>
+                <a class="hre" href="http://baidu.com/">京公网安备11000002000001号 </a>
+                 <a>&nbsp;&nbsp;</a>
+
+
+
+            </span>
+        </div>
+    </div>
+</body>
+</html>
