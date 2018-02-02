@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <style type="text/css">
+        body{
+            margin: 0 auto;
+        }
+        a.one{
+            color: grey;
+            text-decoration: none;
+        }
+        a.two{
+            color: dimgrey;
+        }
+        a.three{
+            color: black;
+            font-weight: bold;
+        }
+        a.four{
+            padding: 10px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+        }
+        a.five{
+            text-decoration: none;
+            padding: 15px;
+            color: black;
+        }
+        #top{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            font-size: 12px;
+            border-bottom:1.5px solid whitesmoke;
+        }
+        #search{
+            padding-top: 20px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #input{
+            padding: 9px 7px;
+            width: 480px;
+            height: 20px;
+        }
+        #ss{
+            width: 102px;
+            height: 41px;
+            padding: 0;
+            border: 0;
+            color: white;
+            background-color: dodgerblue;
+        }
+        #other{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #other-dh{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border:1px solid gainsboro;
+            border-bottom: none;
+            width: 895px;
+            height: 39px;
+            font-size: 14px;
+        }
+        #xinwen{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 843px;
+            height: 363px;
+            padding: 0 25px 0 25px;
+            border:1px solid gainsboro;
+        }
+        #xinwenc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 420px;
+            height: 363px;
+        }
+    </style>
+</head>
+<body onload="starttime()">
+    <div id="top">
+        <span>
+            <a class="one" href="#">天气：xxxxxx</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="#" class="two">换肤</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="two">消息</a>
+        </span>
+        <span>
+            <a href="#" class="three">新闻</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">hao123</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">地图</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">视频</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">贴吧</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">学术</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="three">设置</a>&nbsp;&nbsp;&nbsp;
+            <a href="#" class="four">更多产品</a>
+        </span>
+    </div>
+    <div id="search">
+        <div>
+            <img src="https://www.baidu.com/img/bd_logo1.png" width="270" height="129">
+        </div>
+        <div>
+            <input id="input" type="text" name="baidu">
+            <input type="submit" value="百度一下" id="ss">
+        </div>
+    </div>
+    <div id="other">
+        <div id="other-dh">
+            <span><a href="#" class="five">我的关注</a></span>
+            <span><a href="#" class="five">导航</a> </span>
+            <span><a href="#" class="five">推荐</a> </span>
+        </div>
+        <div id="xinwen">
+            <div id="xinwenc" style="border-right:1px solid gainsboro">
+                <span><h2>时钟</h2></span>
+                <span id="time" style="font-size: 50px;padding: 10px"></span>
+                <script>
+                    function starttime() {
+                        var today=new Date();
+                        var h=today.getHours();
+                        var m=today.getMinutes();
+                        var s=today.getSeconds();
+                        m=checktime(m);
+                        s=checktime(s);
+                        document.getElementById('time').innerHTML=h+":"+m+":"+s;
+                        t=setTimeout(function () {
+                            starttime()
+                        },500);
+                    }
+                    function checktime(i) {
+                        if (i < 10){
+                            i = "0" + i;
+                        }
+                        return i;
+                    }
+                </script>
+            </div>
+            <div id="xinwenc">
+                <span><h2>倒计时</h2></span>
+                <span><button onclick="daojishi()" id="ks">点击后出现一分钟倒计时</button></span>
+                <span id="djs" style="font-size: 50px"></span>
+                <script>
+                    var c = 60;
+                    var t;
+                    function daojishi() {
+                        document.getElementById('djs').innerHTML=+c;
+                        c = c - 1;
+                        if(c == 0){
+                            document.getElementById('djs').innerHTML="时间到！";
+                        }
+                        if(c > 0){
+                            t = setTimeout("daojishi()",1000);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
